@@ -1,15 +1,4 @@
-<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-api</artifactId>
-			<version>0.11.5</version>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-impl</artifactId>
-			<version>0.11.5</version>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-jackson</artifactId>
-			<version>0.11.5</version>
-		</dependency>
+<h1>la documentation backend</h1>
+<p>On doit ajouter les dependances JWT en meme version.
+On ajoute la dependance openapi pour la documentation, la version 2.1.0 compatible seulement avec spring 3+
+</p>
