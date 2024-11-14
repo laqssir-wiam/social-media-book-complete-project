@@ -32,7 +32,10 @@ application:
   security:
     jwt:
       secret-key: feb79e9bdf05df0e806ac052416c91b693ca751f348f6172010b88d7f9a80265
-      expiration: 8772200
+      expiration: 8772200 # 8772200 secondes = 101 jours et 12 heures
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
 #  security:
 #    oauth2:
 #      resourceserver:
