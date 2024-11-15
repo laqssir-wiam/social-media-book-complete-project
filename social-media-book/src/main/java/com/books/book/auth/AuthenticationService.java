@@ -75,7 +75,7 @@ public class AuthenticationService {
                 .build();
     }
 
-    @Transactional
+//    @Transactional : empecher sendValidationEmail(savedToken.getUser()) de terminer
     public void activateAccount(String token) throws MessagingException {
         Token savedToken = tokenRepository.findByToken(token)
                 // todo exception has to be defined
