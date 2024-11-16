@@ -2,6 +2,7 @@ package com.books.book.book;
 
 import com.books.book.common.BaseEntity;
 import com.books.book.feedback.Feedback;
+import com.books.book.history.BookTransactionHistory;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Transient;
