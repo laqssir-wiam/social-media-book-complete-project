@@ -3,9 +3,8 @@ package com.books.book.book;
 import com.books.book.common.BaseEntity;
 import com.books.book.feedback.Feedback;
 import com.books.book.history.BookTransactionHistory;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Transient;
+import com.books.book.user.User;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,9 +30,9 @@ public class Book extends BaseEntity {
     private String bookCover;
     private boolean archived;
     private boolean shareable;
-    // @ManyToOne
-    // @JoinColumn(name = "owner_id")
-    // private User owner;
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private User owner;
     @OneToMany(mappedBy = "book")
     private List<Feedback> feedbacks;
     @OneToMany(mappedBy = "book")
