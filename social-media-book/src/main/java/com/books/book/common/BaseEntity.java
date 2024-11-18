@@ -43,12 +43,18 @@ public class BaseEntity {
     @LastModifiedDate
     @Column(insertable = false)
     private LocalDateTime lastModifiedDate;
-
     @CreatedBy
     @Column(nullable = false, updatable = false)
-    private String createdBy;
+    private Integer createdBy;
 
     @LastModifiedBy
     @Column(insertable = false)
-    private String lastModifiedBy;
+    private Integer lastModifiedBy;
+//    @CreatedBy
+//    @Column(nullable = false, updatable = false)
+//    private String createdBy;
+//
+//    @LastModifiedBy
+//    @Column(insertable = false)
+//    private String lastModifiedBy;
 }
