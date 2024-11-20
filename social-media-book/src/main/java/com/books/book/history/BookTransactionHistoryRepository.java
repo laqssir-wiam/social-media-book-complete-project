@@ -56,11 +56,23 @@ public interface BookTransactionHistoryRepository extends JpaRepository<BookTran
             FROM BookTransactionHistory history
             WHERE history.userId = :userId
             """)
-    Page<BookTransactionHistory> findAllBorrowedBooks(Pageable pageable, String  userId);
+    Page<BookTransactionHistory> findAllBorrowedBooks(Pageable pageable, Integer  userId);
+//    @Query("""
+//            SELECT history
+//            FROM BookTransactionHistory history
+//            WHERE history.userId = :userId
+//            """)
+//    Page<BookTransactionHistory> findAllBorrowedBooks(Pageable pageable, String  userId);
+//    @Query("""
+//            SELECT history
+//            FROM BookTransactionHistory history
+//            WHERE history.book.createdBy = :userId
+//            """)
+//    Page<BookTransactionHistory> findAllReturnedBooks(Pageable pageable, String userId);
     @Query("""
-            SELECT history
-            FROM BookTransactionHistory history
-            WHERE history.book.createdBy = :userId
-            """)
-    Page<BookTransactionHistory> findAllReturnedBooks(Pageable pageable, String userId);
+                SELECT history
+                FROM BookTransactionHistory history
+                WHERE history.book.createdBy = :userId
+                """)
+    Page<BookTransactionHistory> findAllReturnedBooks(Pageable pageable, Integer userId);
 }
