@@ -2,6 +2,7 @@ package com.books.book.feedback;
 
 import com.books.book.book.Book;
 import com.books.book.book.BookRepository;
+import com.books.book.common.PageResponse;
 import com.books.book.exception.OperationNotPermittedException;
 import com.books.book.user.User;
 import jakarta.persistence.EntityNotFoundException;
@@ -37,5 +38,9 @@ public class FeedbackService {
 //        }
         Feedback feedback = feedbackMapper.toFeedback(request);
         return feedBackRepository.save(feedback).getId();
+    }
+
+    public PageResponse<FeedbackResponse> findAllFeedbacksByBook(Integer bookId, int page, int size, Authentication connectedUser) {
+        return null;
     }
 }
