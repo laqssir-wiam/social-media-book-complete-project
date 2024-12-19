@@ -3,11 +3,18 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sm-book-ui": {
+    "social-media-book-ui": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
@@ -17,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/sm-book-ui",
+            "outputPath": "dist/social-media-book-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "sm-book-ui:build:production"
+              "buildTarget": "social-media-book-ui:build:production"
             },
             "development": {
-              "buildTarget": "sm-book-ui:build:development"
+              "buildTarget": "social-media-book-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
