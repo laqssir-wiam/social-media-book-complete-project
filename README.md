@@ -10,3 +10,6 @@ Une fois dans le conteneur, connectez-vous à PostgreSQL avec psql :\
 psql -U username -d social_media_book\
 -U username : remplacez username par le nom d'utilisateur PostgreSQL configuré.\
 -d social_media_book : le nom de la base de données.\
+
+<h3>Swagger ui </h3>
+http://localhost:8088/api/v1/swagger-ui/index.html
