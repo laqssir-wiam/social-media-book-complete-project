@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {AuthenticationRequest} from '../../services/models/authentication-request';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/services';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,7 +11,8 @@ export class LoginComponent {
   authRequest: AuthenticationRequest = {email: '', password: ''};
   errorMsg: Array<string> = [];
   constructor(
-
+      private router: Router,
+      private authService: AuthenticationService
     ) {
     }
 
@@ -38,6 +41,6 @@ export class LoginComponent {
   }
 
   register() {
-//     this.router.navigate(['register']);
+    this.router.navigate(['register']);
   }
 }
