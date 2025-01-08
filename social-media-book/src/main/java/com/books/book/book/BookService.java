@@ -27,17 +27,17 @@ import static com.books.book.book.BookSpecification.withOwnerId;
 @Service
 @RequiredArgsConstructor
 public class BookService {
-    private  BookRepository bookRepository;
-    private  BookMapper bookMapper;
-    private  BookTransactionHistoryRepository transactionHistoryRepository;
-    private  FileStorageService fileStorageService;
+    private final  BookRepository bookRepository;
+    private final BookMapper bookMapper;
+    private final BookTransactionHistoryRepository transactionHistoryRepository;
+    private final FileStorageService fileStorageService;
 
-    public BookService(BookRepository bookRepository, BookMapper bookMapper, BookTransactionHistoryRepository transactionHistoryRepository, FileStorageService fileStorageService) {
-        this.bookRepository = bookRepository;
-        this.bookMapper = bookMapper;
-        this.transactionHistoryRepository = transactionHistoryRepository;
-        this.fileStorageService = fileStorageService;
-    }
+//    public BookService(BookRepository bookRepository, BookMapper bookMapper, BookTransactionHistoryRepository transactionHistoryRepository, FileStorageService fileStorageService) {
+//        this.bookRepository = bookRepository;
+//        this.bookMapper = bookMapper;
+//        this.transactionHistoryRepository = transactionHistoryRepository;
+//        this.fileStorageService = fileStorageService;
+//    }
 
     public Integer save(BookRequest request, Authentication connectedUser) {
         User user = ((User) connectedUser.getPrincipal());

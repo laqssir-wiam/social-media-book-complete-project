@@ -18,11 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RequiredArgsConstructor
 @Tag(name="Book")
 public class BookController {
-    private BookService service;
-
-    public BookController(BookService service) {
-        this.service = service;
-    }
+    private final BookService service;
 
     @PostMapping
     public ResponseEntity<Integer> saveBook(
