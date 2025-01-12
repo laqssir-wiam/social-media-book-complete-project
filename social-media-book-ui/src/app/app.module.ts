@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ActivateAccountComponent } from './pages/activate-account/activate-account.component';
-
+import {CodeInputModule} from 'angular-code-input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,8 @@ import { ActivateAccountComponent } from './pages/activate-account/activate-acco
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CodeInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

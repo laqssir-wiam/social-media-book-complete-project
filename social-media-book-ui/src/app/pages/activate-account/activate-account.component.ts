@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../services/services';
-
+import {skipUntil} from 'rxjs';
 @Component({
   selector: 'app-activate-account',
   templateUrl: './activate-account.component.html',
