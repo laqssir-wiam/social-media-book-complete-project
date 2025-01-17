@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { BookRoutingModule } from './book-routing.module';
 import { MainComponent } from './pages/main/main.component';
 import { MenuComponent } from './componenets/menu/menu.component';
+import { BookCardComponent } from './componenets/book-card/book-card.component';
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    MenuComponent
+    MenuComponent,
+    BookCardComponent
   ],
   imports: [
     CommonModule,
