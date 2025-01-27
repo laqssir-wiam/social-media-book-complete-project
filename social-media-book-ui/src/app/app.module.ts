@@ -8,7 +8,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ActivateAccountComponent } from './pages/activate-account/activate-account.component';
 import {CodeInputModule} from 'angular-code-input';
-import { BookListComponent } from './modules/book/pages/book-list/book-list.component';
 import { HttpTokenInterceptor } from './services/interceptor/http-token.interceptor';
 @NgModule({
   declarations: [
@@ -16,7 +15,8 @@ import { HttpTokenInterceptor } from './services/interceptor/http-token.intercep
     LoginComponent,
     RegisterComponent,
     ActivateAccountComponent,
-    BookListComponent
+    
+
   ],
   imports: [
     BrowserModule,

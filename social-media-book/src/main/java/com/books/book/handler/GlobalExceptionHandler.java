@@ -71,7 +71,6 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<ExceptionResponse> handleException() {
-        System.out.println("Validation error triggered yopiiiiiiii");
         return ResponseEntity
                 .status(UNAUTHORIZED)
                 .body(

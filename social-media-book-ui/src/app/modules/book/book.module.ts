@@ -5,17 +5,19 @@ import { BookRoutingModule } from './book-routing.module';
 import { MainComponent } from './pages/main/main.component';
 import { MenuComponent } from './componenets/menu/menu.component';
 import { BookCardComponent } from './componenets/book-card/book-card.component';
+import { BookListComponent } from './pages/book-list/book-list.component';
 
 
 @NgModule({
   declarations: [
     MainComponent,
     MenuComponent,
-    BookCardComponent
+    BookCardComponent,
+    BookListComponent
   ],
   imports: [
     CommonModule,
-    BookRoutingModule
-  ]
+    BookRoutingModule,
+  ],
 })
 export class BookModule { }
