@@ -1,0 +1,28 @@
+i {
+    cursor: pointer;
+}
+
+div {
+    &.card {
+        max-height: 450px;
+        min-height: 450px;
+    }
+}
+
+.custom-scroll {
+    overflow: scroll;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f1f1f1; /* For Firefox */
+}
+
+/* For WebKit browsers like Chrome and Edge */
+.custom-scroll::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar color */
+    border-radius: 4px; /* Rounded edges */
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+}
